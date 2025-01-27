@@ -1,4 +1,9 @@
 class ZebraController < ApplicationController
+  def layout
+    render({ :template => "game_templates/layout" })
+  end 
+
+
   def giraffe 
     @random_move = ["rock", "paper", "scissors"].sample
     if @random_move == "rock" 
